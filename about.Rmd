@@ -4,13 +4,11 @@ title: "About me"
 
 ## Download my CV
 
-You may find information regarding skills, education and relevant work. 
+You may find information regarding skills, education and relevant work.
 
-## REach me by email
+## Reach me by email
 
- I may be contacted through mileisha.velazquez@upr.edu
- 
-
+I may be contacted through [mileisha.velazquez\@upr.edu](mailto:mileisha.velazquez@upr.edu){.email}
 
 ```{r, out.width="50%", echo=FALSE}
 knitr::include_graphics(("DSCN5631.JPG"))
