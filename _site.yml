@@ -2,7 +2,7 @@ name: "Mileisha L. Velázquez"                                # CHANGE HERE
 output_dir: "."
 navbar:
   title: "Mileisha L. Velázquez"   
-  type: inverse # CHANGE HERE 
+  type: inverse 
   left:
     - text: "Home"
       icon: fa-home
@@ -25,7 +25,10 @@ navbar:
       href: https://github.com/MLV99    # CHANGE HERE 
 output:
   html_document:
-  theme: lumen
+  theme: cerulean
+  highlight: textmate
+  css: "style.css"
+
 
  
 
