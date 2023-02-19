@@ -1,11 +1,12 @@
 ---
-title: "Welcome to my website!"
+title: " Hi, Welcome to my website! "
 ---
 
-## Hi, I am Mileisha L. Velázquez
+## My name is Mileisha L. Velázquez
+
 
 ```{r, out.width="100%", echo=FALSE}
-knitr::include_graphics("DSCN5631.JPG")
+knitr::include_graphics("view.JPG")
 ```
 
 This is a website for creating personal webpages for academic sciences to publicly share our code and science. 

@@ -2,14 +2,33 @@
 title: "About me"
 ---
 
-## Download my CV
+I am a graduate master's student in Marine Sciences from the University of Puerto Rico - Mayagüez Campus. My background is in Biology, as I completed my bachelor's degree at the same institution. 
 
-You may find information regarding skills, education and relevant work.
+My current academic goal is to continue my graduate studies in Environmental Engineering with a specialization in Coastal System Dynamics at the University of Florida this Fall 2023. 
 
-## Reach me by email
+Subsequently, merging the engineering field with marine sciences to contribute knowledge and management enhancement strategies in our dynamic environment that is the ocean. 
 
-I may be contacted through [mileisha.velazquez\@upr.edu](mailto:mileisha.velazquez@upr.edu){.email}
+## Current Thesis Project 
 
-```{r, out.width="50%", echo=FALSE}
-knitr::include_graphics(("DSCN5631.JPG"))
+Research project efforts to achieve enhanced yellowtail snapper sampling for sustainable
+management implementation in Puerto Rico consist of the following objectives:
+• Profiling of fishers and yellowtail snapper species (colirrubia, O. chrysurus).
+o Identify when, where, and how the species should be sampled through fisher
+interviews and LEK.
+• Ultimately, provide adequate data concerning the yellowtail snapper species within the
+island for enhanced implementation of sustainable management practices.
+
+```{r, out.width="70%", echo=FALSE, fig.align= 'center'}
+knitr::include_graphics(("YT.png"))
+```
+
+
+## Hobbies 
+
+Aside from academics, I also enjoy art activities such as acrylic painting, scuba diving, photography, traveling, video games, and  singing. 
+
+Enjoy some of my work and latest photo shots:
+
+```{r, out.width="80%", out.height="20%",fig.align='center', echo=FALSE, fig.fullwidth = TRUE }
+knitr::include_graphics(c("DSCN5631.JPG", "butterfly.JPG", "purple.JPG","marina.jpeg","coral.jpeg", "art.jpeg"))
 ```
