@@ -1,0 +1,12 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:ital@0;1&display=swap');
+</style>
+ /*------------- Whole Document---------------- */
+header { font-family: 'Dancing Script', cursive;
+font size= 20 }
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+}
