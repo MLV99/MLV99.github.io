@@ -1,7 +1,11 @@
 ---
-title: "CV"
+title: "CV - Curriculum Vitae "
+icon: fa-file-pdf-o
 ---
+``````{r image-ref-for-in-text, echo = FALSE, message=FALSE,out.width = "600px", out.height="600px"}
+knitr::include_graphics("/Users/mileishalyannvelazquez/Documents/R/Project No.1/rmarkdown-website-template/MileishaVelazquezCV.pdf")
+``````
 
-<a href="MileishaVelazquezCV.pdf#" class="download" title="Download CV as PDF">Download CV</a>			
+<a href="MileishaVelazquezCV.pdf#" class="download" title="Download CV as PDF">Download CV here</a>			
 
-You may find information regarding skills, education and relevant work.
+Here you may find information regarding skills, education and relevant work. 
