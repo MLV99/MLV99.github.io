@@ -9,6 +9,6 @@ title: " Hi, Welcome to my website! "
 knitr::include_graphics("view.JPG")
 ```
 
-This is a website for creating personal webpages for academic sciences to publicly share our code and science. 
+This is a website for creating and sharing both personal and research data, all of which is possible through coding through R programming language.  
 
 [Read more about me..](about.html)

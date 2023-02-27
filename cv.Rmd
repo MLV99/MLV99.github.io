@@ -8,4 +8,4 @@ knitr::include_graphics("/Users/mileishalyannvelazquez/Documents/R/Project No.1/
 
 <a href="MileishaVelazquezCV.pdf#" class="download" title="Download CV as PDF">Download CV here</a>			
 
-Here you may find information regarding skills, education and relevant work. 
+Here you may find information regarding skills, education and relevant work.
