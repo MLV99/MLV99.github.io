@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Data - Good Plot VS Bad Plot Code Example:</title>
+
+<script src="site_libs/header-attrs-2.19/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">MLV</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Home
+  </a>
+</li>
+<li>
+  <a href="about.html">
+    <span class="fa fa-user"></span>
+     
+    About
+  </a>
+</li>
+<li>
+  <a href="cv.html">
+    <span class="fa fa-file-pdf-o"></span>
+     
+    CV
+  </a>
+</li>
+<li>
+  <a href="Data.html">
+    <span class="fa fa-registered"></span>
+     
+    Data
+  </a>
+</li>
+<li>
+  <a href="https://www.linkedin.com/in/mileisha-lyann-velázquez-lópez">
+    <span class="fa fa-rss"></span>
+     
+    Linkedin
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="mailto:mileisha.velazquez@upr.edu">
+    <span class="fa fa-envelope-o"></span>
+     
+    Contact me
+  </a>
+</li>
+<li>
+  <a href="https://github.com/MLV99">
+    <span class="fa fa-github"></span>
+     
+    GitHub
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Data - Good Plot VS Bad Plot Code
+Example:</h1>
+
+</div>
+
+
+<hr />
+<div id="good-plot---neat-clear-comprehensive" class="section level2">
+<h2><strong>1. Good Plot</strong> - <em>neat, clear &amp;
+comprehensive</em></h2>
+<p>Creating a good plot takes time and dedication to obtain a pleasant
+data presentation. A crucial step to consider is cleanliness, so that
+the reader may be able to easily follow the data flow and achieve a
+certain level of comprehension.</p>
+<p>Adding creative details also aids in drawing attention to the data
+and making it distinguishable from other publications.</p>
+<p>The full data set can be accessed directly form the <a
+href="https://bco-dmo.org/dataset/626102">BCO-DMO BEACON webpage</a></p>
+</div>
+<div id="code" class="section level2">
+<h2>Code:</h2>
+<pre class="r"><code>beacon_data=read_csv(&quot;beacon_data copy.csv&quot;)
+
+#Select and filter  data to plot
+beacon_alk_yr =beacon_data[complete.cases(beacon_data$TA),] %&gt;% 
+  select(ReefSiteName, DecimalDate, TA) %&gt;% 
+  filter(DecimalDate&gt;=2007 &amp; DecimalDate&lt;=2012)
+
+##### Plot selected data: TA by Year #####
+beacon_alk_yr_plot=
+  ggplot(beacon_alk_yr, aes (x=DecimalDate, y=TA))+
+  scale_color_brewer(palette = &quot;Spectral&quot;)+
+  geom_line(aes(color=ReefSiteName), size=1, alpha=0.7)+
+  xlab(&quot;\nYear&quot;)+
+  ylab(&quot;Total Alkalinity (mg/L CaC03)\n&quot;)+
+  scale_x_continuous(limits=c(2007,2012), breaks=seq(2007,2012,1))+
+  scale_y_continuous(limits=c(2260,2430), breaks=seq(2260,2430,20))+
+  theme_few()+
+  theme(legend.position=&quot;none&quot;, text=element_text(size=10,  family=&quot;Times New Roman&quot;))
+
+  # Add image with patchwork 
+image_coral=readPNG(&quot;/Users/mileishalyannvelazquez/Downloads/10348958.png&quot;, native=TRUE )
+beacon_alk_yr_plot_image = beacon_alk_yr_plot+
+  ggtitle(&quot;C.&quot;)+
+  inset_element(p=image_coral,
+                left=0.02, 
+                bottom= 0.1, 
+                right=0.1, 
+                top=0.5,
+                align_to=&#39;panel&#39;, ignore_tag = TRUE)
+
+
+
+ 
+##### Plot selected data: TA by Month####
+beacon_data$Month=as.numeric(substr(beacon_data$Date, 5, 6))-0.5 
+beacon_months=beacon_data[complete.cases(beacon_data$Date),]
+beacon_months=beacon_data[complete.cases(beacon_data$TA),]
+ 
+
+
+beacon_alk_month=beacon_months %&gt;% 
+  group_by(ReefSiteName, Month) %&gt;% 
+  summarise(ci=list(mean_cl_normal(TA) %&gt;% 
+                      rename(Mean=y,lwr=ymin,upr=ymax))) %&gt;% 
+  unnest(cols=c(ci)) %&gt;% 
+  rename(&quot;Site&quot;=&quot;ReefSiteName&quot;)
+
+beacon_alk_month_plot=
+  ggplot()+
+  geom_line(data=beacon_alk_month,aes(x=Month, y=Mean,group=Site, color=Site), size=1, alpha=0.7) +
+  geom_ribbon(data=beacon_alk_month,aes(x=Month, y=Mean,ymin=lwr, ymax=upr,group=Site,
+                                          color=Site, fill=Site), alpha=0.2)+
+  scale_shape_manual(values=c(15,16,17,18))+
+  scale_color_brewer(palette = &quot;Spectral&quot;)+
+  xlab(&quot;\nMonth&quot;)+
+  ylab(&quot;Total Alkalinity (mg/L CaC03)\n&quot;)+
+  scale_x_continuous(limits=c(0,12), breaks=seq(0,12,1))+
+  scale_y_continuous(limits=c(2260,2430), breaks=seq(2260,2430,20))+
+  theme_few()
+
+ 
+
+#Add image to plot
+image_coral=readPNG(&quot;/Users/mileishalyannvelazquez/Downloads/10348958.png&quot;, native=TRUE )
+beacon_alk_month_plot_image = beacon_alk_month_plot+ 
+  ggtitle(&quot;B.&quot;)+
+  theme(legend.direction=&quot;horizontal&quot;, legend.position=&#39;top&#39;, text=element_text(size=10,  family=&quot;Times New Roman&quot;))+
+  inset_element(p=image_coral, 
+                left=0.02, 
+                bottom= 0.1, 
+                right=0.1, 
+                top=0.5,
+                align_to=&#39;panel&#39;, ignore_tag=TRUE)
+
+
+##### Map plot with ggmap####
+ReefSites= select(beacon_months, ReefSiteName:Longitude)
+            
+register_google(key=&quot;AIzaSyDrSx7b41xVQBkSL2HhT9fM1TdhO-S6xVU&quot;, write=TRUE)
+
+Bermuda &lt;- get_map(&quot;Bermuda&quot;, maptype=&#39;satellite&#39;, zoom=11)
+
+ Bermuda &lt;- get_map(&quot;Bermuda&quot;, maptype=&#39;satellite&#39;, zoom=11)
+ 
+ bermuda_map=
+   ggmap(Bermuda)+
+    geom_point(data=ReefSites, 
+               aes(x=Longitude, y=Latitude, color=ReefSiteName, shape=ReefSiteName), size=3)+
+   geom_text(
+     data = ReefSites,
+     aes(x = Longitude, y = Latitude, label = ReefSiteName),
+     size = 5,
+     family=&quot;Times New Roman&quot;,
+      color=&#39;white&#39;,
+     hjust = 1,
+     vjust= 0
+   )  + 
+    scale_shape_manual(values=c(16,16,16,16))+
+  scale_x_continuous(limits=c(-64.9, -64.65))+
+    scale_y_continuous(limits=c(32.23, 32.45))+
+   scale_color_brewer(palette = &quot;Spectral&quot;)+
+   theme(legend.position = &#39;none&#39;,  legend.key = element_blank(), text=element_text(size=10,family=&quot;Times New Roman&quot;))+
+   labs(color=&#39;Site Location&#39;, shape=&#39;Site Location&#39;)+
+   ggtitle(&quot;A.&quot;)
+ ggsave(&quot;bermuda_map.pdf&quot;,bermuda_map, width=9, height=13)
+      
+   Figure_TA_map_plot =  
+    ( bermuda_map|( beacon_alk_month_plot_image / beacon_alk_yr_plot_image))+ 
+     plot_annotation(title= &#39;Total Alkanility Variations Observed by Year and Month at Bermuda Reef Sites\n&#39;, theme=theme(plot.title=element_text(size=16),text=element_text(size=8, family=&quot;Times New Roman&quot;)))+
+plot_layout(guides= &#39;collect&#39;,widths=c(3,5), height= c(3,2))&amp; theme(legend.direction=&#39;vertical&#39;)
+   
+ggsave(&quot;Figure_TA_map_plot.pdf&quot;,Figure_TA_map_plot, width=9, height=9)
+#Plots are scaled properly when opened in R studio
+Figure_TA_map_plot</code></pre>
+<div class="figure">
+<img src="Data_files/figure-html/unnamed-chunk-1-1.png" alt="**Figure 1.** Total alkalinity (TA) at coral reef sites from the BEACON project. (A) Map of surveyed sites across the Bermuda Platform. (B) Monthly TA variations (mean95%) throughout the study duration for each of the BEACON sites. (C) Time series of TA variations at each of the surveyed BEACON sites from 2007 - 2012. In all plots, red represents the Bouy 33 (B33) site, orange represents Midlatform (MP) site, green represents the North Channel (NC) site, and blue represents the Tymes Bay (TB) site." width="864" />
+<p class="caption">
+<strong>Figure 1.</strong> Total alkalinity (TA) at coral reef sites
+from the BEACON project. (A) Map of surveyed sites across the Bermuda
+Platform. (B) Monthly TA variations (mean95%) throughout the study
+duration for each of the BEACON sites. (C) Time series of TA variations
+at each of the surveyed BEACON sites from 2007 - 2012. In all plots, red
+represents the Bouy 33 (B33) site, orange represents Midlatform (MP)
+site, green represents the North Channel (NC) site, and blue represents
+the Tymes Bay (TB) site.
+</p>
+</div>
+</div>
+<div id="bad-plot---avoid-at-all-costs" class="section level2">
+<h2><strong>2. Bad Plot</strong> - <em>Avoid at all costs!</em></h2>
+<p>The following code and generated plot denotes a disastrous example of
+how to present scientific data.</p>
+<p>Certain issues include:</p>
+<ul>
+<li><p>Inconsistency in fonts, color, plot tags, and design</p></li>
+<li><p>Poor plot sizes/spacing</p></li>
+<li><p>Legend position, shapes and colors</p></li>
+<li><p>Unrelated image insertion from the presented data</p></li>
+<li><p>Unclear title and plot description</p></li>
+</ul>
+</div>
+<div id="code-1" class="section level2">
+<h2>Code:</h2>
+<pre class="r"><code>#Bad plot TA &amp; Year 
+beacon_dates=beacon_data[complete.cases(beacon_data$Date),]
+
+beacon_alk_yr_bad_plot=
+    ggplot(beacon_alk_yr, aes (x=DecimalDate, y=TA))+
+    geom_point(aes(color=ReefSiteName, shape=ReefSiteName), size=5,alpha=0.7)+
+    scale_shape_manual(values=c(10,13,9,7))+
+    geom_bernie(bernie = &quot;sitting&quot;)+
+    scale_color_brewer(palette = &quot;Pastel2&quot;)+
+    geom_line(aes(color=ReefSiteName), size=1, alpha=0.5)+
+    xlab(&quot;\nYear&quot;)+
+    ylab(&quot;Total Alkalinity (mg/L CaC03)\n&quot;)+
+    labs(color=&#39;Reef Sites:&#39;, shape=&#39;Reef Sites:&#39;)+
+    plot_annotation(tag_levels = &#39;I&#39;)+
+    scale_x_continuous(limits=c(2007,2012), breaks=seq(2007,2012,1))+
+    scale_y_continuous(limits=c(2260,2460), breaks=seq(2260,2460,20))+
+    theme(panel.background = element_rect(fill = &quot;pink&quot;,
+                                          
+                                          size = 0.5, linetype = &quot;solid&quot;),
+          panel.grid.major = element_line(size = 0.5, linetype = &#39;solid&#39;,
+                                          colour = &quot;lightblue&quot;), 
+          panel.grid.minor = element_line(size = 0.25, linetype = &#39;solid&#39;,
+                                          colour = &quot;white&quot;),
+          legend.position=&#39;bottom&#39;, legend.direction = &#39;vertical&#39;,
+          text=element_text(size=16,  family=&quot;Trattatello&quot;)
+    )
+  
+  
+  #Bad plot TA &amp; Month 
+  beacon_alk_month_bad_plot=
+    ggplot()+
+    geom_line(data=beacon_alk_month,aes(x=Month, y=Mean,group=Site, color=Site), size=1, alpha=0.7) +
+    geom_ribbon(data=beacon_alk_month,aes(x=Month, y=Mean,ymin=lwr, ymax=upr,group=Site,
+                                          color=Site, fill=Site), alpha=0.2)+
+    scale_shape_manual(values=c(15,16,17,18))+
+    scale_color_brewer(palette = &quot;Greens&quot;)+
+    plot_annotation(tag_levels = &#39;I&#39;)+
+    xlab(&quot;\nMonth&quot;)+
+    ylab(&quot;Total Alkalinity (mg/L CaC03)\n&quot;)+
+    scale_x_continuous(limits=c(0,12), breaks=seq(0,12,1))+
+    scale_y_continuous(limits=c(2260,2430), breaks=seq(2260,2430,20))+
+    theme(legend.position=&#39;none&#39;)
+ 
+  
+  #Bad map plot 
+  map=map_data(&#39;world&#39;,wrap=c(-25,335), ylim=c(-55,75)) 
+  
+  map_plot=ggplot()+
+    geom_polygon(data=map,aes(x=long, y=lat, group=group))+ 
+    geom_point(data=beacon_dates,aes(x=Longitude+360, y=Latitude), size=3)+
+    scale_shape_manual(values=c(15,18,16,17))+  
+    coord_fixed(ratio=1,xlim=c(295,295.4),ylim=c(32.15,32.5), expand=TRUE)+
+   
+    annotate(&quot;text&quot;, x=295.11, y=32.307, label=&quot;Tynes Bay&quot;, size=5, color=&quot;black&quot;)+ 
+    annotate(&quot;text&quot;, x=295.10, y=32.334, label=&quot;Bouy 33&quot;, size=5, color=&quot;black&quot;)+
+    annotate(&quot;text&quot;, x=295.11, y=32.38, label=&quot;Mid Platform&quot;, size=5, color=&quot;black&quot;)+
+    annotate(&quot;text&quot;, x=295.14, y=32.42, label=&quot;North Channel&quot;, size=5, color=&quot;black&quot;)+
+    ylab(&quot;Latitude (°N)&quot;)+
+    xlab(&quot;Longitude (°E)&quot;)+
+    ggtitle(&quot;(a)&quot;)+
+    theme(
+      panel.grid.major=element_blank(),
+      panel.grid.minor=element_blank(),
+      panel.background=element_rect(fill=&#39;grey&#39;), 
+      axis.line=element_line(color=&quot;black&quot;), 
+      text=element_text(size=24),
+      legend.position=&#39;none&#39;,
+      plot.title=element_text(hjust=0.5) 
+    )
+
+  
+    Figure_bad= (map_plot/beacon_alk_yr_bad_plot+beacon_alk_month_bad_plot)+
+    plot_layout (guides=&#39;auto&#39;, widths=c(2,2), height=c(2,2), ncol=3)+ 
+    plot_annotation(tag_levels=&#39;I&#39;, title= &#39;\nTA PLOTS\n&#39;)
+                  
+  Figure_bad</code></pre>
+<div class="figure">
+<img src="Data_files/figure-html/unnamed-chunk-2-1.png" alt="Fig.2 TA at sites" width="1056" />
+<p class="caption">
+Fig.2 TA at sites
+</p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

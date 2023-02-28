@@ -1,7 +1,7 @@
 name: "Mileisha L. Velázquez"                                # CHANGE HERE 
 output_dir: "."
 navbar:
-  title: "Mileisha L. Velázquez"   
+  title: "MLV"   
   type: inverse
   left:
     - text: "Home"
@@ -13,6 +13,9 @@ navbar:
     - text: "CV"
       icon: fa-file-pdf-o
       href: cv.html
+    - text: "Data"
+      icon: fa-registered
+      href: Data.html
     - text: "Linkedin"
       icon: fa-rss
       href: https://www.linkedin.com/in/mileisha-lyann-velázquez-lópez  # CHANGE HERE OR DELETE ALL 3 LINES 
@@ -24,8 +27,11 @@ navbar:
       icon: fa-github
       href: https://github.com/MLV99    # CHANGE HERE 
 output: 
-html_document:
-theme: cerulean
+  html_document:
+      theme: cerulean
+      css: style.css
+     
+    
  
 
 

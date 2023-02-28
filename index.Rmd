@@ -9,6 +9,7 @@ title: " Hi, Welcome to my website! "
 knitr::include_graphics("view.JPG")
 ```
 
-This is a website for creating and sharing both personal and research data, all of which is possible through coding through R programming language.  
+This is a website for creating and sharing both personal and research data, all of which is possible through coding within the R programming language.  
 
-[Read more about me..](about.html)
+[Read more about me](about.html) or [take a look at recent data managed through R](Data.html)
+

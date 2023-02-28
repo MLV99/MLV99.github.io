@@ -27,7 +27,7 @@ knitr::include_graphics(("YT.png"))
 
 Aside from academics, I also enjoy art activities such as acrylic painting, scuba diving, photography, traveling, video games, and  singing. 
 
-Enjoy some of my work and latest photo shots:
+Scroll down and enjoy some of my work and latest photo shots:
 
 ```{r, out.width="80%", out.height="20%",fig.align='center', echo=FALSE, fig.fullwidth = TRUE }
 knitr::include_graphics(c("DSCN5631.JPG", "butterfly.JPG", "purple.JPG","marina.jpeg","coral.jpeg", "art.jpeg"))
