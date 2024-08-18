@@ -2,14 +2,14 @@
 title: " Hi, Welcome to my website! "
 ---
 
-## My name is Mileisha L. Velázquez
+## My name is Mileisha L. Velázquez and I am a PhD graduate student in the Department of Environmental Engineering Sciences at the University of Florida
 
 
 ```{r, out.width="100%", echo=FALSE}
-knitr::include_graphics("view.JPG")
+knitr::include_graphics("Headshot.JPG")
 ```
 
-This is a website for creating and sharing both personal and research data, all of which is possible through coding within the R programming language.  
-
+Here you may learn more about my current research, CV, e-mail contact and and other social profiles. 
+Quick links below:
 [Read more about me](about.html) or [take a look at recent data managed through R](Data.html)
 

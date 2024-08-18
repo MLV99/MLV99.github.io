@@ -2,30 +2,18 @@
 title: "About me"
 ---
 
-I am a graduate master's student in Marine Sciences from the University of Puerto Rico - Mayagüez Campus. My background is in Biology, as I completed my bachelor's degree at the same institution. 
+I am a graduate Ph.D student in Environmental Engineering Sciences from the University of Florida. My academic background includes a bachelors degree in Biology with a Marine Sciences masters degree from the University of Puerto Rico - Mayagüez Campus.  
 
-My current academic goal is to continue my graduate studies in Environmental Engineering with a specialization in Coastal System Dynamics at the University of Florida this Fall 2023. 
+Future research goals funded by NIH will be focused on exploring pathogenic impacts of Vibrio spp.  in coastal  ecological services and human health. Furthermore, I am developing a literature review concerning per- and polyfluoroalkyl substances (PFAS) and their impacts in aquatic systems, which includes trophic interactions, microbial composition changes and interactions with microplastics. 
 
 Subsequently, merging the engineering field with marine sciences to contribute knowledge and management enhancement strategies in our dynamic environment that is the ocean. 
 
-## Current Thesis Project 
 
-Research project efforts to achieve enhanced yellowtail snapper sampling for sustainable
-management implementation in Puerto Rico consist of the following objectives:
-• Profiling of fishers and yellowtail snapper species (colirrubia, O. chrysurus).
-o Identify when, where, and how the species should be sampled through fisher
-interviews and LEK.
-• Ultimately, provide adequate data concerning the yellowtail snapper species within the
-island for enhanced implementation of sustainable management practices.
-
-```{r, out.width="70%", echo=FALSE, fig.align= 'center'}
-knitr::include_graphics(("YT.png"))
-```
 
 
 ## Hobbies 
 
-Aside from academics, I also enjoy art activities such as acrylic painting, scuba diving, photography, traveling, video games, and  singing. 
+Aside from research, I also enjoy art activities such as acrylic painting, scuba diving, photography, traveling, video games, and  singing. 
 
 Scroll down and enjoy some of my work and latest photo shots:
 
