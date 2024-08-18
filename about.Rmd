@@ -4,8 +4,7 @@ title: "About me"
 
 BIO: Mileisha L. Velázquez has finished her first year as a doctoral student in the Environmental Engineering Sciences department at the University of Florida. Motivated by her desire to mitigate degradation of coastlines and water quality caused by atmospheric events and human activities, she earned a bachelor’s degree in biology and later a master’s in oceanography from the University of Puerto Rico at Mayagüez. During her doctoral program, Mileisha will tackle environmental issues related to emerging contaminants like per- and polyfluoroalkyl substances (PFAS), studying their ecotoxicological impacts on aquatic coastal ecosystems. She will investigate how PFAS pollution affects gene expression, microbial activity, nutrient cycles, and ecosystem services, with the goal of minimizing exposure risks for marine life and communities dependent on these ecosystems. Through her research, which spans across environmental science disciplines including pollutant transport, microbial ecology, ecotoxicology, and risk assessment, Mileisha aims to inform and enhance the management and conservation of coastal ecosystems for the benefit of future generations.
 
-
-
+<br><br>
 
 ## Hobbies 
 
@@ -14,5 +13,18 @@ Aside from research, I also enjoy [creating art](https://www.instagram.com/milei
 Scroll down and enjoy some of my work and latest photo shots:
 
 ```{r, out.width="80%", out.height="20%",fig.align='center', echo=FALSE, fig.fullwidth = TRUE }
-knitr::include_graphics(c( "GOPR0214.JPG", "GOPR0183.JPG","DSCN5631.JPG","ELECTRO.jpeg"))
+knitr::include_graphics( "GOPR0214.JPG")
+                 
+```
+<br>
+```{r, out.width="80%", out.height="20%",fig.align='center', echo=FALSE, fig.fullwidth = TRUE }
+ knitr::include_graphics  ("GOPR0183.JPG")
+```
+<br>
+```{r, out.width="80%", out.height="20%",fig.align='center', echo=FALSE, fig.fullwidth = TRUE }
+knitr::include_graphics  ("DSCN5631.JPG")
+```
+<br>
+```{r, out.width="80%", out.height="20%",fig.align='center', echo=FALSE, fig.fullwidth = TRUE }
+ knitr::include_graphics ("ELECTRO.jpeg")
 ```
