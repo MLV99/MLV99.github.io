@@ -1,5 +1,5 @@
 ---
-title: " Hi, Welcome to my website! "
+title: " Welcome to my website! "
 ---
 
 ## My name is Mileisha L. Velázquez and I am a PhD graduate student in the Department of Environmental Engineering Sciences at the University of Florida
