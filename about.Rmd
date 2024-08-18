@@ -14,5 +14,5 @@ Aside from research, I also enjoy [creating art](https://www.instagram.com/milei
 Scroll down and enjoy some of my work and latest photo shots:
 
 ```{r, out.width="80%", out.height="20%",fig.align='center', echo=FALSE, fig.fullwidth = TRUE }
-knitr::include_graphics(c( "GOPR0214.JPG", "GOPR0183.JPG","DSCN5631.JPG","ELECTRO.JPG"))
+knitr::include_graphics(c( "GOPR0214.JPG", "GOPR0183.JPG","DSCN5631.JPG","ELECTRO.jpeg"))
 ```
