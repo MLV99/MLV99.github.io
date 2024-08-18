@@ -22,7 +22,7 @@ navbar:
   right:
     - text: "Contact me"
       icon: fa-envelope-o
-      href: mailto:mileisha.velazquez@upr.edu                    # CHANGE HERE 
+      href: mailto:velazquezm@ufl.edu                    # CHANGE HERE 
     - text: "GitHub"
       icon: fa-github
       href: https://github.com/MLV99    # CHANGE HERE 
