@@ -2,11 +2,7 @@
 title: "About me"
 ---
 
-I am a graduate Ph.D student in Environmental Engineering Sciences from the University of Florida. My academic background includes a bachelors degree in Biology with a Marine Sciences masters degree from the University of Puerto Rico - Mayagüez Campus.  
-
-Future research goals funded by NIH will be focused on exploring pathogenic impacts of Vibrio spp.  in coastal  ecological services and human health. Furthermore, I am developing a literature review concerning per- and polyfluoroalkyl substances (PFAS) and their impacts in aquatic systems, which includes trophic interactions, microbial composition changes and interactions with microplastics. 
-
-Subsequently, merging the engineering field with marine sciences to contribute knowledge and management enhancement strategies in our dynamic environment that is the ocean. 
+Bio: Mileisha L. Velázquez has finished her first year as a doctoral student in the Environmental Engineering Sciences department at the University of Florida. Motivated by her desire to mitigate degradation of coastlines and water quality caused by atmospheric events and human activities, she earned a bachelor’s degree in biology and later a master’s in oceanography from the University of Puerto Rico at Mayagüez. During her doctoral program, Mileisha will tackle environmental issues related to emerging contaminants like per- and polyfluoroalkyl substances (PFAS), studying their ecotoxicological impacts on aquatic coastal ecosystems. She will investigate how PFAS pollution affects gene expression, microbial activity, nutrient cycles, and ecosystem services, with the goal of minimizing exposure risks for marine life and communities dependent on these ecosystems. Through her research, which spans across environmental science disciplines including pollutant transport, microbial ecology, ecotoxicology, and risk assessment, Mileisha aims to inform and enhance the management and conservation of coastal ecosystems for the benefit of future generations.
 
 
 
