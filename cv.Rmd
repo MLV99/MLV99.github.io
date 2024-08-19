@@ -7,5 +7,3 @@ knitr::include_graphics("CV_MLV2024.pdf")
 ``````
 
 <a href="MileishaVelazquezCV.pdf#" class="download" title="Download CV as PDF">Download CV here</a>			
-
-Here you may find information regarding skills, education and relevant work.
