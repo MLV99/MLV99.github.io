@@ -1,7 +1,6 @@
 ---
 title: "Data"
 ---
-
 <br><br>
 
 ```{r, out.width="80%", out.height="20%",fig.align='center', echo=FALSE, fig.fullwidth = TRUE }
