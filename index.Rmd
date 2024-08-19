@@ -12,7 +12,8 @@ title: " Welcome to my website! "
 knitr::include_graphics("Headshot.JPG")
 ```
 
-Here you may learn more about my current research, CV, e-mail contact and and other social profiles. 
+Here you may learn more about my current research, CV, e-mail contact and and other social profiles.
+
 <br>
 
 Quick links below:
