@@ -3,7 +3,11 @@ title: "Data"
 ---
 <br>
 
-## Pending...
+
+```{r, out.width="80%", out.height="20%",fig.align='center', echo=FALSE, fig.fullwidth = TRUE }
+knitr::include_graphics( "under_construction.png")
+                 
+```
 
 ------------------------------------------------------------------------
 
