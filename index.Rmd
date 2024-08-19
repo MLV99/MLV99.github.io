@@ -16,5 +16,6 @@ Here you may learn more about my current research, CV, e-mail contact and and ot
 
 <br>
 Quick links below:
+<br>
 [Read more about me](about.html) or [take a look at recent data managed through R](Data.html)
 
