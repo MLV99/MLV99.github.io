@@ -1,5 +1,5 @@
 ---
-title: " Hi, my name is Mileisha Lyann Velázquez "
+title: " Hi, my name is *Mileisha Lyann Velázquez* "
 ---
 <br><br><br>
 
@@ -12,7 +12,7 @@ title: " Hi, my name is Mileisha Lyann Velázquez "
 knitr::include_graphics("headshot-2026.jpg")
 ```
 
-### Here you may learn more about my doctoral research, view most recent CV, e-mail contact, and other professional social profiles.
+### Explore this site to dive into my doctoral research, view my latest CV, or find my professional social profiles. If you’d like to collaborate or just say hello, feel free to reach out via email.
 
 <br>
 
