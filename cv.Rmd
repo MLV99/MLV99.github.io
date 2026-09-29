@@ -3,7 +3,7 @@ title: "CV - Curriculum Vitae "
 icon: fa-file-pdf-o
 ---
 ``````{r image-ref-for-in-text, echo = FALSE, message=FALSE,out.width = "600px", out.height="600px"}
-knitr::include_graphics("CV_MLV2024.pdf")
+knitr::include_graphics("CV_Velazquez_columns.pdf")
 ``````
 
 <a href="MileishaVelazquezCV.pdf#" class="download" title="Download CV as PDF">Download CV here</a>			

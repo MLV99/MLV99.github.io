@@ -1,21 +1,23 @@
 ---
-title: " Welcome to my website! "
+title: " Hi, my name is Mileisha Lyann Velázquez "
 ---
 <br><br><br>
 
 
 
-## My name is Mileisha L. Velázquez and I am a PhD graduate student in the Department of Environmental Engineering Sciences at the University of Florida
+## I am a fourth-year PhD graduate student in the Department of Environmental Engineering Sciences at the University of Florida
 
 
 ```{r, out.width="100%", echo=FALSE}
-knitr::include_graphics("Headshot.JPG")
+knitr::include_graphics("headshot-2026.jpg")
 ```
 
-Here you may learn more about my current research, CV, e-mail contact and and other social profiles.
+### Here you may learn more about my doctoral research, view most recent CV, e-mail contact, and other professional social profiles.
 
 <br>
-Quick links below:
+
+### Quick links below:
+
 <br>
-[Read more about me](about.html) or [take a look at recent data managed through R](Data.html)
+[Read more about me](about.html) or [take a look at recent data managed through R Studio](Data.html)
 
